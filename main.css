@@ -1,0 +1,184 @@
+:root {
+    --red: #FF6F61;
+    --green: #136A5A;
+    --frame-mobile: 18px;
+    --frame-desktop: 42px;
+    --margin-s: 16px;
+    --margin-m: 32px;
+    --margin-l: 64px;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(futura-medium.tff);
+    font-weight: normal;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    color: var(--red);
+    font-family: Futura, Arial, sans-serif;
+}
+
+header, main {
+    height: 100vh;
+    width: 100vw;
+    border: var(--frame-mobile) solid var(--red);
+    background-color: var(--green);
+}
+
+header {
+    padding: var(--margin-l) var(--margin-s) var(--margin-m);
+    text-align: center;
+    background-image: url(mage-bw.png);
+    background-position: center bottom;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+img {
+    max-width: 600px;
+}
+
+button {
+    transform: rotate(90deg);
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 82px;
+}
+
+main {
+    padding: var(--margin-m) var(--margin-s);
+    background-image: url(mage-bw-upside.png);
+    background-position: center top;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+.content {
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 47px;
+    line-height: 62px;
+}
+
+h2, h3 {
+    font-size: 27px;
+    line-height: 36px;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 25px;
+    margin-bottom: 4px;
+}
+
+h3, h4 {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 19px;
+    line-height: 25px;
+}
+
+li.grande {
+    font-size: 23px;
+    line-height: 31px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+a {
+    color: var(--red);
+    font-size: 19px;
+    line-height: 25px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 50%;
+    }
+
+    .content:last-child {
+        grid-column-start: 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header, main {
+        border: var(--frame-desktop) solid var(--red);
+        padding: var(--margin-l);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 58px;
+        line-height: 77px;
+    }
+
+    h2 {
+        font-size: 42px;
+        line-height: 56px;
+    }
+
+    h3 {
+        font-size: 58px;
+        line-height: 77px;
+    }
+
+    h4 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    li {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    li.grande {
+        font-size: 42px;
+        line-height: 56px;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    a {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
